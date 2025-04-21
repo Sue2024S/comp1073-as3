@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>4 Patitas - The Dog Breed Explorer | Third-Party APIs </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<script src="js/dog.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to 4 Patitas!</h1>
+        <p>4 Patitas is a platform dedicated to dog lovers and enthusiasts. Our mission is to provide a comprehensive resource for dog breeds, their characteristics, and care tips.</p>
+    </header>
+    <main>
+        <p>We believe that every dog deserves a loving home and the best care possible. Our platform is designed to help you find the perfect breed for your lifestyle and needs.</p>
+        <p>Let's discover more about your future dog!!.</p>
+        <section id="breed-list">
+            <h2>Explore Breeds</h2>
+            <div class="breed-grid">
+                </div>
+        </section>
+        <section id="breed-details" class="hidden">
+            <h2>Breed Details</h2>
+            <div id="breed-info">
+                <h3 id="breed-name"></h3>
+                <img id="breed-image" src="" alt="Breed Image">
+                <p><span class="label">Temperament:</span> <span id="breed-temperament"></span></p>
+                <p><span class="label">Life Span:</span> <span id="breed-lifespan"></span></p>
+                <p><span class="label">Weight:</span> <span id="breed-weight"></span></p>
+                <p><span class="label">Height:</span> <span id="breed-height"></span></p>
+                <p><span class="label">Other Info:</span> <span id="breed-other"></span></p>
+            </div>
+            <div id="nutrition-suggestions">
+                <h3>General Nutritional Suggestions</h3>
+                <p id="nutrition-info">Information about the typical dietary needs for this size and energy level will appear here.</p>
+                </div>
+            <button id="back-to-list">Back to Breed List</button>
+        </section>
+    </main>
+	<footer>
+        <p><small>4 Patitas | 2025 Dog Breed Explorer </small></p>
+    </footer>
+</body>
+</html>
