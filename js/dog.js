@@ -10,7 +10,7 @@
 
 
 // base URL & Key for the Dog API
-const baseURL = 'https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=';
+const baseURL = 'https://api.thecatapi.com/v1/';
 const key = 'live_NHzATeTac3Hb73la0ZKCubBMtkbFPpZZnM29sGJ3blMVnLJfIx4SorcTtDnZlW4f';
 let url;
 
@@ -18,11 +18,18 @@ const select = document.getElementById('cats');
 select.addEventListener('change', imageGetter);
 
 
-function imageGetter(event){
+async function imageGetter(event){
 
-    event.preventDefault();  
+    event.preventDefault(); 
+    
+    const breedId = this.value;
+    if(!breedId) return;
 
-    url = baseURL + key;
+// Get images
+    const res = await fetch(`${baseURL}/images/search?limit=1&breed_ids=${breedId}&api_key=${key}`);
+
+// Get breed list
+const breedsRes = await fetch(`${BASE_URL}/breeds?api_key=${API_KEY}`);
     fetch(url)
         .then(response => response.json())
         .then(data => {
