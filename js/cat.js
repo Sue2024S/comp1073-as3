@@ -15,6 +15,7 @@ select.addEventListener('change', catGetter);
 
 
 async function catGetter(event){
+    
 
     event.preventDefault(); 
     
@@ -51,6 +52,23 @@ async function catGetter(event){
 
     const description = document.getElementById('description');
     description.innerHTML = breedInfo.description;
+}
+
+//Back to list button: to clear the Cat image and breed information when clicked
+
+const backButton = document.getElementById('back-to-list');
+
+backButton.addEventListener('click', clearAll);
+
+function clearAll(){
+    document.getElementById('breed-image').src = '';
+    document.getElementById('temperament').innerHTML = '';
+    document.getElementById('life_span').innerHTML = '';
+    document.getElementById('weight').innerHTML = '';
+    document.getElementById('origin').innerHTML = '';
+    document.getElementById('description').innerHTML = '';
+
+    select.value = '';
 }
 
 
