@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>4 Patitas - The Dog Breed Explorer | COMP 1073 Third-Party APIs </title>
+	<title>4 Patitas - The Cat Explorer | COMP 1073 Third-Party APIs </title>
     <link rel="icon" type="png" sizes="16x16" href="img/iconpatitas.png" />
 	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
@@ -13,28 +13,36 @@
 <body>
     <header>
         <h1>Welcome to 4 Patitas!</h1>
-        <p>4 Patitas is a platform dedicated to dog lovers and enthusiasts. Our mission is to provide a comprehensive resource for dog breeds, their characteristics, and care tips.</p>
+        <p>4 Patitas is a platform dedicated to cat lovers and enthusiasts. Our mission is to provide a comprehensive resource for cat breeds, their characteristics, and care tips.</p>
     </header>
     <main>
-        <p>We believe that every dog deserves a loving home and the best care possible. Our platform is designed to help you find the perfect breed for your lifestyle and needs.</p>
-        <p>Let's discover more about your future dog!!.</p>
+        <p>We believe that every cat deserves a loving home and the best care possible. Our platform is designed to help you find the perfect breed for your lifestyle and needs.</p>
+        <p>Let's discover more about your future cat!!.</p>
         <section id="breed-list">
             <h2>Explore Breeds</h2>
-            <button id="search">search</button>
+            
             <!-- container for breed cards generated with js-->
             <div class="breed-grid">
-                </div>
+                <form>
+                    <select name="cats" id="cats">
+                        <option value="asho">American Shorthair</option>
+                        <option value="buri">Burmilla</option>
+                        <option value="csho">Colorpoint Shorthair</option>
+                        <option value="java">Javanese</option>
+                    </select>
+                </form>
+            </div>
         </section>
         <section id="breed-details" class="hidden">
             <h2>Breed Details</h2>
             <div id="breed-info">
                 <h3 id="breed-name"></h3>
                 <img id="breed-image" src="" alt="Breed Image">
-                <p><span class="label">Temperament:</span> <span id="breed-temperament"></span></p>
-                <p><span class="label">Life Span:</span> <span id="breed-lifespan"></span></p>
-                <p><span class="label">Weight:</span> <span id="breed-weight"></span></p>
-                <p><span class="label">Height:</span> <span id="breed-height"></span></p>
-                <p><span class="label">Other Info:</span> <span id="breed-other"></span></p>
+                <p><span class="label">Temperament:</span> <span id="temperament"></span></p>
+                <p><span class="label">Life Span:</span> <span id="life_span"></span></p>
+                <p><span class="label">Weight:</span> <span id="weight"></span></p>
+                <p><span class="label">Origin:</span> <span id="origin"></span></p>
+                <p><span class="label">Other Info:</span> <span id="description"></span></p>
             </div>
             <div id="nutrition-suggestions">
                 <h3>General Nutritional Suggestions</h3>
@@ -44,7 +52,7 @@
         </section>
     </main>
 	<footer>
-        <p><small>4 Patitas | 2025 Dog Breed Explorer </small></p>
+        <p><small>4 Patitas | 2025 Cat Explorer </small></p>
     </footer>
 </body>
 </html>
