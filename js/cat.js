@@ -1,9 +1,6 @@
 // primary API
 // https://thedogapi.com/
 
-//secondary API
-// https://developer.nutritionix.com/
-
 
 // base URL & Key for the Dog API
 const baseURL = 'https://api.thecatapi.com/v1';
@@ -13,9 +10,13 @@ let url;
 const select = document.getElementById('cats');
 select.addEventListener('change', catGetter);
 
-
+//Function
 async function catGetter(event){
+
+    const breedDetails = document.getElementById('breed-details');
+    breedDetails.classList.remove('hidden');
     
+    // <section id="breed-details" class="hidden"></section>
 
     event.preventDefault(); 
     
@@ -68,8 +69,16 @@ function clearAll(){
     document.getElementById('origin').innerHTML = '';
     document.getElementById('description').innerHTML = '';
 
+    const breedDetails = document.getElementById('breed-details');
+    breedDetails.classList.add('hidden');
+    
+
     select.value = '';
 }
+
+
+
+
 
 
 
