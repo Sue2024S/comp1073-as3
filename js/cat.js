@@ -53,8 +53,6 @@ async function catGetter(event){
     description.innerHTML = breedInfo.description;
 }
 
-//Clear all
 
-const clearButton = document.getElementByID
 
 
