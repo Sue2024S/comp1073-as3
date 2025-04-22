@@ -15,10 +15,10 @@ const key = 'live_NHzATeTac3Hb73la0ZKCubBMtkbFPpZZnM29sGJ3blMVnLJfIx4SorcTtDnZlW
 let url;
 
 const select = document.getElementById('cats');
-select.addEventListener('change', imageGetter);
+select.addEventListener('change', catGetter);
 
 
-async function imageGetter(event){
+async function catGetter(event){
 
     event.preventDefault(); 
     
@@ -26,10 +26,19 @@ async function imageGetter(event){
     if(!breedId) return;
 
 // Get images
-    const res = await fetch(`${baseURL}/images/search?limit=1&breed_ids=${breedId}&api_key=${key}`);
+    const imageCats = await fetch(`${baseURL}/images/search?limit=1&breed_ids=${breedId}&api_key=${key}`);
 
-// Get breed list
-const breedsRes = await fetch(`${BASE_URL}/breeds?api_key=${API_KEY}`);
+    const imageData = await imageCats.json();
+    const cat = imageData[0];
+
+    // Get breed list
+    const breedsRes = await fetch(`${BASE_URL}/breeds?api_key=${API_KEY}`);
+
+    const breedData = await breedRes.json();
+    const breedInfo = breedData.find(breed => breed.id === breedId);
+
+
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
